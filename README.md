@@ -33,7 +33,7 @@ This project utilizes the following technologies:
   
 ## Deployment
 
-* **Live Application:** You can access the deployed version of this application at [https://weather-gdkk4utrd-satyams-projects-1b2d2073.vercel.app/](https://weather-gdkk4utrd-satyams-projects-1b2d2073.vercel.app/). This application is deployed from the `master` branch.
+* **Live Application:** You can access the deployed version of this application at [https://weather-gdkk4utrd-satyams-projects-1b2d2073.vercel.app/](https://weather-app-puce-five-59.vercel.app/). This application is deployed from the `master` branch.
 
 * **Deployment Notes:**
     - To deploy the application yourself, you'll need to set up a Vercel account and connect your Git repository. Refer to the Vercel documentation for details: https://vercel.com/docs/getting-started-with-vercel(https://vercel.com/docs/getting-started-with-vercel)
