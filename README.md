@@ -30,4 +30,12 @@ This project utilizes the following technologies:
 
 * **React:** https://legacy.reactjs.org/ - A powerful JavaScript library for building dynamic user interfaces.
 * **Tailwind CSS:** https://tailwindcss.com/docs/installation - A utility-first CSS framework for rapid styling.
+  
+## Deployment
+
+* **Live Application:** You can access the deployed version of this application at [https://weather-gdkk4utrd-satyams-projects-1b2d2073.vercel.app/](https://weather-gdkk4utrd-satyams-projects-1b2d2073.vercel.app/). This application is deployed from the `master` branch.
+
+* **Deployment Notes:**
+    - To deploy the application yourself, you'll need to set up a Vercel account and connect your Git repository. Refer to the Vercel documentation for details: https://vercel.com/docs/getting-started-with-vercel(https://vercel.com/docs/getting-started-with-vercel)
+    - Make sure you have environment variables configured for your API keys or other sensitive information (if applicable).
 
