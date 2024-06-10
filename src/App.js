@@ -35,8 +35,9 @@ function App() {
 
   useEffect(() => {
     getWeather();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query, units]);
-
+  
   const toggleDarkMode = () => {
     setDarkMode((prevMode) => !prevMode);
   };
