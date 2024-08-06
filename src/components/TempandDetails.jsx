@@ -67,25 +67,33 @@ const TempandDetails = ({
   ];
 
   return (
-    <div>
-      <div className="flex items-center justify-center py-5 text-2xl text">
+    <div className="flex flex-col md:gap-y-4 p-4 md:p-6">
+      {/* Weather Description */}
+      <div className="flex items-center justify-center py-4 text-xl md:text-2xl font-light">
         <p>{details}</p>
       </div>
-      <div className="flex flex-row items-center justify-center py-3 gap-52">
-        <div className="ml-28">
-          <img src={icon} alt="weather icon" className="" />
+
+      {/* Main Weather Info */}
+      <div className="flex flex-col md:flex-row items-center justify-center py-4 space-y-3 md:space-y-0 md:space-x-80">
+        <div className="flex-shrink-0">
+          <img
+            src={icon}
+            alt="weather icon"
+            className="w-24 h-24 md:w-32 md:h-32"
+          />
         </div>
-        
-        <div>
-        <p className="text-5xl ">{`${temp.toFixed()}°`}</p> 
+
+        <div className="text-center">
+          <p className="text-4xl md:text-5xl font-medium">{`${temp.toFixed()}°`}</p>
         </div>
-        <div className="flex flex-col space-y-4 items-start ml-20">
+
+        <div className="flex flex-col space-y-4 md:space-y-8 items-center md:items-start">
           {verticalDetails.map(({ id, Icon, title, value }) => (
             <div
               key={id}
-              className="flex font-light text-sm items-center justify-center"
+              className="flex font-light text-sm md:text-base items-center justify-center"
             >
-              <Icon size={28} className="mr-1" />
+              <Icon size={24} className="mr-1" />
               {`${title}: `}
               <span className="font-medium ml-1">{value}</span>
             </div>
@@ -93,13 +101,14 @@ const TempandDetails = ({
         </div>
       </div>
 
-      <div className="flex flex-row items-center justify-center space-x-14 text-sm py-12 ml-16">
+      {/* Horizontal Details */}
+      <div className="flex mt-3 md:mt-0 flex-row items-center justify-start text-sm md:text-base py-4 md:items-center md:justify-center md:py-6 space-x-4 overflow-x-auto">
         {horizontalDetails.map(({ id, Icon, title, value }) => (
-          <div key={id} className="flex flex-row items-center">
-            <Icon size={28} />
-            <p>
+          <div key={id} className="flex items-center space-x-2">
+            <Icon size={24} className="text-gray-700" />
+            <p className="text-center">
               {`${title}: `}
-              <span className="font-medium ml-1">{value}</span>
+              <span className="font-medium">{value}</span>
             </p>
           </div>
         ))}

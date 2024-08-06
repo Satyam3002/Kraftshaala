@@ -2,7 +2,7 @@ import React from "react";
 
 const Forecast = ({title, data}) => {
     return (
-        <div>
+        <div className="pb-8">
             <div className="flex items-center justify-start mt-6 ml-3">
                 <p className="font-medium uppercase text-xl">{title}</p>
             </div>

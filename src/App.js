@@ -13,12 +13,11 @@ function App() {
   const [units, setUnits] = useState("metric");
   const [weather, setWeather] = useState(null);
   const [darkMode, setDarkMode] = useState(false);
-  
 
   const getWeather = async () => {
     const message = query.q ? query.q : "current location";
     toast.info(`Fetching weather data for ${message.toUpperCase()}`);
-  
+
     try {
       const data = await getFormattedWeatherData({ ...query, units });
       if (data) {
@@ -31,13 +30,12 @@ function App() {
       toast.error("An error occurred while fetching weather data. Please try again.");
     }
   };
-  
 
   useEffect(() => {
     getWeather();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query, units]);
-  
+
   const toggleDarkMode = () => {
     setDarkMode((prevMode) => !prevMode);
   };
@@ -53,7 +51,12 @@ function App() {
           <Forecast title="daily forecast" data={weather.daily} />
         </>
       )}
-      <ToastContainer autoClose={2500} hideProgressBar={true} theme="colored" />
+      <ToastContainer
+        autoClose={2500}
+        hideProgressBar={true}
+        theme="colored"
+        className="toast-container"  
+      />
     </div>
   );
 }
